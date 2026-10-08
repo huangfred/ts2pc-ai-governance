@@ -1,7 +1,7 @@
 ---
 name: ai-development-risk-assessment
-version: 1.0
-description: A consultant-facing assessment tool for evaluating AI development mode choices. Uses a three-dimensional framework (enterprise scale × expert capability × expert authority) to locate ten common development patterns on a risk spectrum, identify contradictory combinations that signal organizational dysfunction, and produce actionable recommendations for non-technical decision-makers. Companion tool to ai-agent-enterprise-implementation.md and vibe-coding-containment.md.
+version: 1.1
+description: A consultant-facing assessment tool for evaluating AI development mode choices. Uses a three-dimensional framework (enterprise scale × expert capability × expert authority) to locate ten common development patterns on a risk spectrum, identify contradictory combinations that signal organizational dysfunction, and produce actionable recommendations for non-technical decision-makers. v1.1 adds a consultant intake questionnaire, enabling a 15-minute diagnostic workflow. Companion tool to ai-agent-enterprise-implementation.md and vibe-coding-containment.md.
 ---
 
 # AI Development Risk Assessment (Consultant Tool)
@@ -38,6 +38,77 @@ Risk is not determined by which tool you use. It is determined by **who is using
 - **No Veto Power**: Their opinion exists, but delivery-speed pressure overrides it.
 
 **Note on Dimension 3**: For OPC/individual, veto power is not externally granted — the operator *is* the decision-maker. This dimension collapses into "capability" alone.
+
+---
+
+## Consultant Intake Questionnaire (Five Questions)
+
+These five questions are the entry point for the entire assessment. The consultant asks them in sequence, translates the answers into coordinates on the three-dimensional framework, and then maps them to Table 1 and Table 2.
+
+### Question 1: Enterprise Scale
+
+> Which category best describes your enterprise?
+
+- □ OPC / Individual (you are the decision-maker)
+- □ Small Enterprise (no technical team)
+- □ Medium Enterprise (has IT, but no dedicated security)
+- □ Large Enterprise (has dedicated security and compliance requirements)
+
+**Dimension**: X-axis (Enterprise Scale)
+
+---
+
+### Question 2: Handling PII or Payments
+
+> Will your system handle customer personal data, credit card information, or payment flows?
+
+- □ Yes
+- □ No
+
+**Purpose**: Defines the boundary of the "Core Security Zone." If the answer is "Yes," Vibe Coding in that zone will be strictly restricted.
+
+---
+
+### Question 3: Expert Capability
+
+> Does anyone on your team see what the AI-generated code *failed to include* — for example, missing RLS policies, exposed keys in the frontend, or API routes without authentication?
+
+- □ Yes, and I know to check for these things (Capable)
+- □ Yes, but they review whether the *functionality* works, not whether it is *secure* (Not Capable)
+- □ No, we rely entirely on what the AI generates (Not Capable)
+
+**Dimension**: Y-axis (Expert Capability)
+
+---
+
+### Question 4: Expert Authority
+
+> When this person says "this cannot go live, it needs another review," is their opinion adopted?
+
+- □ Yes, they have final veto power (Has Veto)
+- □ Yes, but it usually gets overridden by delivery-speed pressure (No Veto)
+- □ We don't have such a person (No Veto)
+
+**Dimension**: Dimension 3 (Expert Authority)
+
+---
+
+### Question 5: Current Mode
+
+> Which development mode are you currently using (or planning to use)?
+
+- □ momo as Seller
+- □ E-commerce Platform SaaS
+- □ No-Code Platform
+- □ Low-Code Platform
+- □ SI + Managed Hosting
+- □ FDE + Vibe Coding
+- □ Vibe Coding + Managed Hosting
+- □ Vibe Coding + Payments/Auth/Hosting
+- □ Build-Your-Own (self-hosted)
+- □ Other: __________
+
+**Purpose**: Maps to Table 1, locating the client's current risk level.
 
 ---
 
@@ -91,11 +162,7 @@ Not a tool problem — an organizational problem. The consultant should directly
 
 ### Step 1: Locate the Client
 
-Ask three questions:
-
-1. **Enterprise scale?** OPC / Small / Medium / Large
-2. **Does anyone on your team see what the AI-generated code *failed to include*?** Capable / Not capable
-3. **When this person says "cannot go live," is their decision final?** Has veto / No veto
+Use the five questions in the "Consultant Intake Questionnaire" to collect the client's organizational state.
 
 ### Step 2: Map to Risk Level
 
@@ -111,6 +178,8 @@ Using Table 1, locate the client's current mode and corresponding risk level.
 ### Step 4: Deliver the One-Line Diagnosis
 
 > "Your risk is not in the tool you chose. It is in **[the missing gap]**. Until that gap is closed, Vibe Coding may only be used for **[the safe zone]**."
+
+**The entire workflow can be completed in 15 minutes.**
 
 ---
 
@@ -130,4 +199,5 @@ Vibe Coding in the green zone (capable + has veto) is medium-high risk. In the r
 |---|---|
 | `ai-agent-enterprise-implementation.md` | The 4-phase, 10-step methodology |
 | `vibe-coding-containment.md` | The containment module (Steps 11-15) |
-| `ai-development-risk-assessment.md` (this file) | The consultant-facing diagnostic instrument |
+| `ai-development-risk-assessment-zh.md` | Consultant diagnostic instrument (Chinese) |
+| `ai-development-risk-assessment.md` (this file) | Consultant diagnostic instrument (English) |
