@@ -1,13 +1,17 @@
 ---
 name: ai-agent-enterprise-implementation
-description: A complete 4-phase, 10-step enterprise methodology and teacher book for deploying AI Agents and custom Skills. Focuses on conservative financial governance, negative prompting against optimistic forecasts, segregation of duties, and converting legacy ERP/ISO manuals into active agent guardrails. Use when guiding digital transformation, corporate management restructuring, or deploying AI agents in finance, operations, and cross-functional management.
+version: 1.1
+description: A complete 4-phase, 10-step enterprise methodology and teacher book for deploying AI Agents and custom Skills. Focuses on conservative financial governance, negative prompting against optimistic forecasts, segregation of duties, and converting legacy ERP/ISO manuals into active agent guardrails. v1.1 adds a fifth governance layer — "Vibe Coding Risk Containment" — which is modularized in the companion skill `vibe-coding-containment.md`. Use when guiding digital transformation, corporate management restructuring, or deploying AI agents in finance, operations, and cross-functional management.
 ---
-
+> **Version note**: This is v1.1. The original v1 can be viewed in the
+> [commit history](https://github.com/huangfred/ts2pc-ai-governance/commits/main/ai-agent-enterprise-implementation.md).
 # Enterprise AI Agent Implementation Methodology (The Teacher Book)
 
 ## Core Philosophy & Absolute Red Lines
+
 1. **Zero-Placebo Rule**: Strictly prohibit optimistic forecasting, vague encouragement, or placebo terminology. All agent outputs must be grounded in conservative, worst-case scenarios and hard historical data.
 2. **From Paper SOP to Agent Constraints**: Do not let agents read passive 500-page manuals. Convert legacy corporate risks, past operational failures, and internal controls into active, negative-prompting markdown guardrails.
+3. **Vibe Coding Containment Rule**: Never allow AI-generated code to touch the "Core Security Zone" (customer PII, employee credentials, payment flows, core financials). Non-technical teams may only use Vibe Coding inside a governed sandbox whose blast radius is architecturally capped. The platform's "one-click deploy" is not a security guarantee — the platform's ToS will always shift final liability back to you.
 
 ---
 
@@ -30,6 +34,7 @@ description: A complete 4-phase, 10-step enterprise methodology and teacher book
 #### Step 3: Deploy Technical & Engineering Agents
 - **Action**: Equip code and system agents (e.g., Devin, Cursor) with technical skill packages enforcing architectural, security, and performance guardrails.
 - **Teacher's Rule**: Never allow technical agents to bypass security or compliance standards for the sake of speed.
+- **Teacher's Rule (v1.1 addendum)**: When technical agents generate code via Vibe Coding tools, they operate under the containment rules defined in `vibe-coding-containment.md`. Speed is never a valid justification for bypassing the Chu-Han Boundary.
 
 #### Step 4: Deploy Management & Operational Agents
 - **Action**: Equip administrative, financial, and HR agents with business and governance skills (e.g., budget review, talent acquisition).
@@ -69,3 +74,24 @@ description: A complete 4-phase, 10-step enterprise methodology and teacher book
 #### Step 10: Compliance & Accuracy Audits
 - **Action**: Periodically audit agent output accuracy, rule adherence, and overall efficiency.
 - **Teacher's Rule**: Treat AI agents with the same rigorous internal auditing standards applied to human administrative staff.
+- **Teacher's Rule (v1.1 addendum)**: Audits must cover both *financial* accuracy and *security* posture. Include: RLS policy status, exposed API keys, authentication coverage, and whether any micro-innovation tool has crossed into PII territory.
+
+---
+
+### Phase 5: Vibe Coding Risk Containment & Governed Development (AI 開發的資安隔離與治理)
+
+> **This phase is modularized.** The full content lives in the companion skill file `vibe-coding-containment.md`. Reference it, load it, and keep it in sync. It is not "step five" — it is the fifth layer that wraps around the entire lifecycle, active from Phase 2 onward and reviewed weekly in Phase 4.
+
+**Module reference**: `vibe-coding-containment.md`
+
+**Steps covered by the module**:
+- **Step 11**: Enforce the "Chu-Han Boundary" Architectural Isolation
+- **Step 12**: Install AI-Powered Security Gates Before Deployment
+- **Step 13**: Adopt Governed Low-Code as the Default for Non-Technical Teams
+- **Step 14**: Platform Liability Reality Check
+- **Step 15**: Weekly "Blast Radius" Review
+
+**Integration points**:
+- Activated in **Phase 2 / Step 3** the moment technical agents begin generating code.
+- Reviewed in **Phase 4 / Step 9** during the weekly post-mortem.
+- Audited in **Phase 4 / Step 10** as part of security posture checks.
